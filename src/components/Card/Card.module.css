@@ -1,0 +1,15 @@
+.registerCard{
+    height: 100vmin;
+    width:50vw;
+    float: left;
+}
+
+.placeCardText{
+    color: rgba(255, 255, 255, 1);
+    position: absolute;
+    bottom: 0px;
+    font-weight: 900;
+    font-size: 45px;
+    width: 100vh;
+    padding: 10vmin;
+}

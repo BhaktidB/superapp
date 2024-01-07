@@ -1,0 +1,9 @@
+.signUpBtn{
+    background-color: rgba(114, 219, 115, 1);
+    color: rgba(255, 255, 255, 1);
+    font-weight: 600;
+    border: none;
+    border-radius: 5vmin;
+    height: 5.5vmin;
+    width: -webkit-fill-available;
+}

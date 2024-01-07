@@ -1,14 +1,15 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
- 
+  font-family: 'Roboto', sans-serif; 
 }
 
 *{
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
   min-height: 100vh;
+  background-color: rgba(0, 0, 0, 1);
+
 }
