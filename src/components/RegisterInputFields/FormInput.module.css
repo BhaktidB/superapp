@@ -8,4 +8,14 @@ input{
     width: -webkit-fill-available;
     padding: 2vmin;
     margin-bottom: 2vmin;
+    transition: border-color 0.3s ease;
 }
+
+.error{
+    color: red;
+    font-size: x-small;
+}
+
+input[type="text"]:focus {
+    border: 1px solid #894242;
+  }

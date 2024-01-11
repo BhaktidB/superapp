@@ -2,9 +2,9 @@ import React from 'react'
 import styles from './SignUp.module.css'
 
 
-const SignUp = () => {
+const SignUp = ({handleClicker}) => {
   return (
-    <button className={styles.signUpBtn}>SIGN UP</button>
+    <button className={styles.signUpBtn} onClick={handleClicker}>SIGN UP</button>
   )
 }
 

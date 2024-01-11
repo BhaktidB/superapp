@@ -2,11 +2,11 @@ import React from 'react'
 import styles from './FormInput.module.css'
 
 
-const FormInput = ({text,placeholder,value,onChange,style}) => {
+const FormInput = ({name,text,placeholder,value,onChange,errorCheck}) => {
   return (<>
 
-    <input type={text} placeholder={placeholder} value={value} style={style} onChange={onChange}/>
-    {/* {!filled&&(<p>Field is required</p>)} */}
+    <input type={text} name={name} placeholder={placeholder} value={value} onChange={onChange}/>
+    {errorCheck?<p className={styles.error}>{errorCheck.name}</p>:<></>}
 
   </>)
 }

@@ -1,0 +1,77 @@
+.flexContainer{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    gap: 10px;
+}
+
+.flexItem1{
+    background-color: rgb(201, 107, 107);
+    height: 100vh;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 7vmin;
+    padding-left: 10vmin;
+}
+
+.flexItem2{
+    background-color: red;
+    height: 100vh;
+    width: 75%;
+    padding-left: 10vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.subheading{
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.groupWarning{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: -20px;
+}
+
+.warning{
+    color: rgba(255, 0, 0, 1);
+    font-size: 3vmin;
+}
+
+.warningSign{
+    float: left;
+    height: 3vmin;
+}
+
+.arrangeSelBtn{
+    height: 16vmin;
+    width: 50vmin;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.arrangeBox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80vmin;
+    gap: 2vmin;
+    justify-content: center;
+    height: 80vmin;
+}
+
+.nextBtn{
+    font-weight: 500;
+    position: relative;
+    left: 28vmin;
+    top: 2vmin;
+}
