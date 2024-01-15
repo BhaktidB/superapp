@@ -1,0 +1,29 @@
+.girdItem1 { grid-area: user;
+    max-width: 75vmin; 
+    min-height: 30vmin;
+        } 
+.girdItem2 { grid-area: notes; }
+.girdItem3 { grid-area: article; }
+.girdItem4 { grid-area: weather; }
+.girdItem5 { grid-area: clock; }
+
+.gridContainer{
+display: grid;
+grid-template-areas:
+'user notes article'
+'weather notes article'
+'clock clock article';
+gap: 2vmin;
+background-color: #2196F3;
+height: 100vh;
+padding: 5vmin;
+padding-bottom: 15vmin;
+}
+
+.gridContainer > div {
+    background-color: rebeccapurple;
+    text-align: center;
+    padding: 0px 0;
+    font-size: 30px;
+}
+

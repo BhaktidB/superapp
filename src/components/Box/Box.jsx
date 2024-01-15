@@ -2,29 +2,37 @@ import React,{useEffect, useState} from 'react'
 import styles from '../Box/Box.module.css'
 
 
-const Box = ({boxText,boxImage,boxBg,onBoxClick,bgColor}) => {
-    const [imageSrc, setImageSrc] = useState("/image/action.png");
-    const [isSelected, setIsSelected] = useState(false);
-    const [customBgColor, setCustomBgColor] = useState({ backgroundColor: 'rgba(255, 82, 9, 1)' });
-    
-    useEffect(()=>{
-        setImageSrc(boxImage);
-    setCustomBgColor({ backgroundColor: boxBg });
+const Box = (props) => {
+  const [isselected,setIsselected]=useState(false)
 
-  }, [boxImage, boxBg]);
+  
 
-  const onClickHandler = () => {
-    setIsSelected(!isSelected);
-    onBoxClick(name, !isSelected);
-  };
+  const addValuesToCategories=(value)=>{
+    const existingValue=props.categoryList.filter((category)=>category===value)
+    console.log(existingValue)
+    if(!existingValue.length){
+      props.setCategories([...props.categoryList,value])
+    }else{
+      const newCategoryList=props.categoryList
+    .filter((category)=>{return category!==value
+    })
+    props.setCategories(newCategoryList)
 
-    
-//   style={{ backgroundColor: bgColor }}
+    }
+  }
+  useEffect(()=>{
+    setIsselected(props.categoryList.includes(props.boxText));
+   },[props.categoryList, props.boxText])     
+
   return (
 <>
-<div className={styles.box} onClick={onClickHandler} style={{ ...customBgColor, border: isSelected ? '3px solid rgba(17, 184, 0, 1)' : 'none' }}>
-<p className={styles.boxText}>{boxText}</p>
-<img className={styles.boxImg} src={imageSrc} alt="" />
+<div className={styles.box} style={{backgroundColor:props.color,border: isselected ? '3px solid rgba(17, 184, 0, 1)' : 'none'}}
+ onClick={()=>{
+  addValuesToCategories(props.boxText);
+  setIsselected(!isselected);
+}}>
+<p className={styles.boxText}>{props.boxText}</p>
+<img className={styles.boxImg} src={props.imageSrc} alt={props.alt} />
 </div>
 </>
     )
