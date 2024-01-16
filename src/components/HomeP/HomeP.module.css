@@ -1,29 +1,105 @@
-.girdItem1 { grid-area: user;
-    max-width: 75vmin; 
-    min-height: 30vmin;
-        } 
-.girdItem2 { grid-area: notes; }
-.girdItem3 { grid-area: article; }
-.girdItem4 { grid-area: weather; }
-.girdItem5 { grid-area: clock; }
-
-.gridContainer{
-display: grid;
-grid-template-areas:
-'user notes article'
-'weather notes article'
-'clock clock article';
-gap: 2vmin;
-background-color: #2196F3;
-height: 100vh;
-padding: 5vmin;
-padding-bottom: 15vmin;
+.gridContainer {
+    display: grid;
+    grid-template-areas:
+        'user notes article'
+        'weather notes article'
+        'clock clock article';
+    gap: 2vmin;
+    background-color: #2196F3;
+    height: 100vh;
+    padding: 5vmin;
+    padding-bottom: 15vmin;
 }
 
-.gridContainer > div {
-    background-color: rebeccapurple;
+.gridContainer > div{
+    border-radius: 3vmin;
+    padding: 3vmin;
+}
+
+.girdItem1 {
+    grid-area: user;
+    min-width: 45vmin;
+    min-height: 25vmin;
+    max-height: 35vmin;
+    background-color: #5746EA;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+}
+
+.girdItem2 {
+    grid-area: notes;
+    background-color: #F1C75B;
+    color: #000000;
+    max-width: 60vmin;
+}
+
+.girdItem3 {
+    grid-area: article;
+    background-color: #FFFFFF;
+    color: #272727;
+    max-width: 75vmin;
+    min-width: 50vmin;
+}
+
+.girdItem4 {
+    grid-area: weather;
+    background-color: #101744;
+    color: #FFFFFF;
+    max-width: 75vmin;
+
+}
+
+.girdItem5 {
+    grid-area: clock;
+    background-color: #1E2343;
+    color: #FFFFFF;
+    min-height: 25vmin;
+}
+
+.girdItem1>img{
+    height: 170px;
+    float: left;
+    padding-right: 3vmin;
+}
+
+
+.genreChips{
+    color: #FFFFFF;
+    background-color: #9F94FF;
+    width: 15vmin;
     text-align: center;
-    padding: 0px 0;
-    font-size: 30px;
+    border-radius: 3vmin;
+    height: 5vmin;
+    padding: 5px;
 }
 
+.flexGenreChips{
+    display: flex;
+    flex-direction: row;
+    height: 12vmin;
+    width: 40vmin;
+    flex-wrap: wrap;
+    gap: 0.5vmin;
+
+}
+
+.girdItem2 > p{
+    font-weight: 700;
+    font-size: xx-large;
+    text-align: center;
+    color: #000000;
+
+}
+
+.girdItem2>textarea{
+    border: none;
+    background-color: transparent;
+    resize: none;
+    height: 80%;
+    width: 100%;
+    text-align: left;
+    overflow: auto;
+    outline: none;
+    font-size: 18px;
+}
