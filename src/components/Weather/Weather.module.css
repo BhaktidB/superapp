@@ -1,0 +1,53 @@
+.weatherDate{
+    color: #FFFFFF;
+    font-size: medium;
+    background-color: #FF4ADE;
+    padding: 2vmin;
+    border-radius: 3vmin 3vmin 0vmin 0vmin;
+}
+
+.weatherOvercast{
+    font-weight: 600;
+    font-size: medium;
+    color: #FFFFFF;
+
+}
+
+.weatherCondition{
+    color: #FFFFFF;
+    font-size: x-small;
+    width: 15vmin;
+
+}
+
+.weatherTemp{
+    color: #FFFFFF;
+    font-size: x-large;
+    font-weight:bold ;
+}
+
+.weatherFlexC{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: self-start;
+}
+
+.cloudy{
+    height: 8vmin;
+
+}
+
+.weatherIcons{
+    height: 3vmin;
+
+}
+
+.lines{
+    width: 1px;
+    height: 57px;
+    /* background-color: wheat; */
+    border: 0.78px solid #FFFFFF;
+    margin-top: 12px;
+
+}

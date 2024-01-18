@@ -10,16 +10,18 @@
     padding: 5vmin;
     padding-bottom: 15vmin;
 }
-
+/* 
 .gridContainer > div{
     border-radius: 3vmin;
     padding: 3vmin;
-}
+} */
 
 .girdItem1 {
+    border-radius: 3vmin;
+    padding: 3vmin;
     grid-area: user;
     min-width: 45vmin;
-    min-height: 25vmin;
+    /* min-height: 25vmin; */
     max-height: 35vmin;
     background-color: #5746EA;
     color: #FFFFFF;
@@ -28,29 +30,46 @@
 }
 
 .girdItem2 {
+    border-radius: 3vmin;
+    padding: 3vmin;
     grid-area: notes;
     background-color: #F1C75B;
     color: #000000;
     max-width: 60vmin;
+    max-height: 60vmin;
+
 }
 
 .girdItem3 {
+    border-radius: 3vmin;
+    padding: 3vmin;
     grid-area: article;
     background-color: #FFFFFF;
     color: #272727;
     max-width: 75vmin;
     min-width: 50vmin;
+    max-height: 90vh;
+    padding: unset;
+
 }
 
 .girdItem4 {
+    border-radius: 3vmin;
+    padding: 3vmin;
     grid-area: weather;
     background-color: #101744;
     color: #FFFFFF;
     max-width: 75vmin;
-
+    max-height: 25vmin;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: unset;
 }
 
 .girdItem5 {
+    border-radius: 3vmin;
+    padding: 3vmin;
     grid-area: clock;
     background-color: #1E2343;
     color: #FFFFFF;
@@ -103,3 +122,8 @@
     outline: none;
     font-size: 18px;
 }
+.nextBtn{
+    bottom: 2vmin;
+    font-weight: 500;
+    position: relative;
+    left: 85vw;}

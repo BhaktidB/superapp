@@ -2,12 +2,23 @@ import React, { useState,useEffect } from 'react'
 import styles from '../HomeP/HomeP.module.css'
 import News from '../News/News';
 import Weather from '../Weather/Weather';
+import Stopwatch from '../Stopwatch/Stopwatch';
+import GreenPillBtn from '../Buttons/GreenPillBtn'
+import { useNavigate } from 'react-router-dom'
+
+
 const HomeP = () => {
+  const navigate = useNavigate()
+
   const [userData, setUserData] = useState(null);
   const [userDataGenre, setUserDataGenre] = useState(null);
   const [homeNotes, setHomeNotes] = useState('');
 
-
+  const handleNextBtnClick = () => {
+    
+      navigate('/movie')
+    
+  }
 
   useEffect(() => {
     const storedUserData = localStorage.getItem('userData');
@@ -67,10 +78,14 @@ const HomeP = () => {
 
 {/* clock */}
     <div className={styles.girdItem5}>
-      clock
+      <Stopwatch />
     </div>
 
     </div>
+    {/* next button */}
+    <div className={styles.nextBtn} onClick={handleNextBtnClick}>
+          <GreenPillBtn genreSelected={'Browse'} />
+        </div>
     </>
   )
 }

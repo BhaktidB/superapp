@@ -17,12 +17,22 @@ const News = () => {
     }
   return (
     <>
-    <p>{weather.location.localtime}{(weather.location.localtime>12)?'PM':'AM'}</p>
-    <div><img src={weather.current.condition.icon} alt="" /><p>{weather.current.condition.text}</p></div>
-    <div><p>{weather.current.temp_c}</p>
-    <p><img src="" alt="" />{weather.current.pressure_mb}</p></div>
-    <div><p><img src="" alt="" />{weather.current.wind_kph}</p>
-    <p><img src="" alt="" />{weather.current.humidity}</p></div>
+    <p className={styles.weatherDate}>{weather?.location?.localtime}{(weather?.location?.localtime.slice(-6,-1))?' PM':' AM'}</p>
+    
+    <span className={styles.weatherFlexC}>
+    <div><img src={weather?.current?.condition?.icon} alt="" /><p className={styles.weatherOvercast}>{weather?.current?.condition?.text}</p></div>
+    
+    <span className={styles.lines}></span>
+    
+    <div><p className={styles.weatherTemp}>{weather?.current?.temp_c}°C</p>
+    <p className={styles.weatherCondition}><img className={styles.weatherIcons} src="/svg/pressure.svg" alt="pressure" />{weather?.current?.pressure_mb} mbar</p><span className={styles.weatherCondition}>Pressure</span></div>
+    
+    <span className={styles.lines}></span>
+   
+    <div><p className={styles.weatherCondition}><img className={styles.weatherIcons} src="/svg/wind.svg" alt="wind" />{weather?.current?.wind_kph} km/h<span> Wind</span></p>
+    <p className={styles.weatherCondition}><img className={styles.weatherIcons} src="/svg/humidity.svg" alt="humidity" />{weather?.current?.humidity}%<span> Humidiy</span> </p></div>
+    </span>
+
     </>
   )
 }

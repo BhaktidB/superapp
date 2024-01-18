@@ -1,0 +1,26 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 3vmin;
+}
+
+.user{
+    border-radius: 50%;
+    border: 1px solid white;
+    height: 50px;
+    width: 50px;
+}
+
+.flexContainerMovies{
+    display: flex;
+    flex-direction: column;
+    margin: 3vmin;
+    gap: 5vmin;
+    font-weight: 600;
+}
+
+.flexContainerMovies section >p{
+    color:#878787;
+    font-weight: 500;
+}

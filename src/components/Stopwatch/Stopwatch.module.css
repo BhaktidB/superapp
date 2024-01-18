@@ -1,0 +1,50 @@
+.flexContainer{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.settings{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.timing{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: -12px;
+    width: 30vw;
+
+}
+.timing>span>p{
+    color: #949494;
+    font-size: smaller;
+
+}
+
+.timing span > img{
+    height: 10px;
+}
+
+.timing span{
+    text-align: center;
+
+}
+
+.stopwatchBtn{
+    background-color: #FF6A6A;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 30vmin;
+
+}
+
+/* .circle{
+    height: 10px;
+} */
