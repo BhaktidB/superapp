@@ -27,6 +27,8 @@
     color: #FFFFFF;
     display: flex;
     flex-direction: row;
+    text-align: left;
+
 }
 
 .girdItem2 {
@@ -35,8 +37,10 @@
     grid-area: notes;
     background-color: #F1C75B;
     color: #000000;
-    max-width: 60vmin;
-    max-height: 60vmin;
+    max-width: 85vmin;
+    /* max-width: 60vmin; */
+    max-height: 35vmin;
+    /* max-height: 60vmin; */
 
 }
 
@@ -69,7 +73,8 @@
 
 .girdItem5 {
     border-radius: 3vmin;
-    padding: 3vmin;
+    /* padding: 3vmin; */
+    padding: 5vmin;
     grid-area: clock;
     background-color: #1E2343;
     color: #FFFFFF;
@@ -125,5 +130,8 @@
 .nextBtn{
     bottom: 2vmin;
     font-weight: 500;
-    position: relative;
-    left: 85vw;}
+    /* position: relative;
+    left: 85vw; */
+    position: absolute;
+    right: 35vmin;
+}

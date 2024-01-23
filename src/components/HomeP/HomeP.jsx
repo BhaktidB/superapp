@@ -42,6 +42,7 @@ const HomeP = () => {
 
   return (
     <>
+    <center>
     <div className={styles.gridContainer}>
     {/* profile */}
     <div className={styles.girdItem1}>
@@ -67,16 +68,16 @@ const HomeP = () => {
     </div>
 
 {/* news */}
-    <div className={styles.girdItem3}>
+    {/* <div className={styles.girdItem3}> */}
       {/* works only on localhost in this dev plan */}
       {/* <News /> */}
-    </div>
+    {/* </div> */}
 
 {/* weather */}
-    <div className={styles.girdItem4}>
+    {/* <div className={styles.girdItem4}> */}
       {/* works only on localhost in this dev plan */}
       {/* <Weather /> */}
-    </div>
+    {/* </div> */}
 
 {/* clock */}
     <div className={styles.girdItem5}>
@@ -84,6 +85,7 @@ const HomeP = () => {
     </div>
 
     </div>
+    </center>
     {/* next button */}
     <div className={styles.nextBtn} onClick={handleNextBtnClick}>
           <GreenPillBtn genreSelected={'Browse'} />
