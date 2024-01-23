@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import './App.css'
 import {BrowserRouter,Routes,Route,Navigate} from 'react-router-dom'
@@ -8,13 +8,12 @@ import HomePage from './pages/HomePage/HomePage'
 import MoviesPage from './pages/MoviesPage/MoviesPage'
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const userRef = useRef(null);
   useEffect(() => {
     // Check if the user is logged in from local storage
     const userLog = localStorage.getItem('userData');
-    if(userLog){
-      setIsLoggedIn(true)
-    }
+    const userData = JSON.parse(userLog);
+    userRef.current = userData;
 
 
   }, []);
@@ -24,9 +23,9 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path='/register' element={<RegisterPage /> } />
-      <Route path='/genre' element={isLoggedIn?<GenrePage /> : <Navigate to="/register" />} />
-      <Route path='/' element={isLoggedIn?<HomePage />: <Navigate to="/register" /> } />
-      <Route path='/movie' element={isLoggedIn?<MoviesPage /> : <Navigate to="/register" /> } />
+      <Route path='/genre' element={userRef.current?<GenrePage /> : <Navigate to="/register" />} />
+      <Route path='/' element={userRef.current?<HomePage />: <Navigate to="/register" /> } />
+      <Route path='/movie' element={userRef.current?<MoviesPage /> : <Navigate to="/register" /> } />
     </Routes>
     </BrowserRouter>
     </>
