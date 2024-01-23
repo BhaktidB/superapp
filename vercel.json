@@ -1,0 +1,20 @@
+{
+    "routes":[
+        {
+            "src":"/",
+            "dest":"/"
+        },
+        {
+            "src":"/register",
+            "dest":"/"
+        },
+        {
+            "src":"/genre",
+            "dest":"/"
+        },
+        {
+            "src":"/movie",
+            "dest":"/"
+        }
+    ]
+}
