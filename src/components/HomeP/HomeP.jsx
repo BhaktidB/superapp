@@ -68,7 +68,8 @@ const HomeP = () => {
 
 {/* news */}
     <div className={styles.girdItem3}>
-      <News />
+      {/* works only on localhost in this dev plan */}
+      {/* <News /> */}
     </div>
 
 {/* weather */}
