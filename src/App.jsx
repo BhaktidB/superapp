@@ -6,18 +6,19 @@ import HomePage from './pages/HomePage/HomePage';
 import MoviesPage from './pages/MoviesPage/MoviesPage';
 
 function App() {
+const token=localStorage.getItem('token')
 
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/register" element={token?<HomePage />: <RegisterPage />} />
           <Route
             path="/genre"
-            element={<GenrePage /> }/>
+            element={<GenrePage />}/>
           <Route
             path="/"
-            element={<HomePage /> }
+            element={token?<HomePage /> :<RegisterPage />}
           />
           <Route
             path="/movie"

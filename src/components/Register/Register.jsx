@@ -56,6 +56,7 @@ const Register = () => {
         if(isValid){
           localStorage.setItem('userData',JSON.stringify(formData));
           navigate('/genre')
+          
         }
 
       }
