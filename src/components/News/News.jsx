@@ -17,7 +17,7 @@ const News = () => {
     }
   return (
     <>
-    <img className={styles.articleImage} src={news.urlToImage} alt="" />
+    <img className={styles.articleImage} src={news.urlToImage} alt="picture" />
     <p className={styles.articleTitle}>{news.title}</p>
     <p className={styles.articleDescription}>{news.description}</p>
     </>
