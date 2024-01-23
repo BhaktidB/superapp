@@ -21,7 +21,7 @@ useEffect(()=>{
       setLengthError(true)
     }else{
       localStorage.setItem("genre",categories)
-      navigate('/home')
+      navigate('/')
     }
   }
 

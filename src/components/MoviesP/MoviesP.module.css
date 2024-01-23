@@ -24,3 +24,18 @@
     color:#878787;
     font-weight: 500;
 }
+
+.poster{
+    height: 120px;
+    width: 150px;
+    border-radius: 10px;
+    margin: 2vmin;
+
+}
+
+.flexMovies{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    float: bottom;
+}
